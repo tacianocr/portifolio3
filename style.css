@@ -8,11 +8,14 @@
 }
 body {
     overflow: hidden;
+    background: fixed;
+   
 }
 .container {
     width: 100%;
     min-height: 100vh;
-    background-color: #0d0d0e;
+    background-color: #000000f8;
+    background-image: url('imagem/pexels-dmitriy-tarasenko-16013845.jpg');
 }
 nav {
     display: flex;
@@ -25,7 +28,7 @@ nav {
 }
 .logo {
     display: flex;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 800;
     color: cadetblue;
     letter-spacing: 3px;
@@ -70,10 +73,24 @@ b {
     overflow: hidden;
 }
 .cols {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+.cols .col {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+@media (min-width: 768px) {
+    .cols .col {
+        width: 50%;
+    }
+}
+
 .topline {
-    display: block;
+    display: flex;
     position: relative;
     font-size: 35px;
     letter-spacing: 5px;
@@ -88,12 +105,13 @@ b {
     background-color: rgb(240, 236, 243);
 }
 h1 {
-    display: block;
+    display: flex;
     font-size: 7em;
     font-weight: 900;
     color: cadetblue;
 }
 .multiText {
+    
     color: rgb(230, 229, 231);
     text-transform: capitalize;
 }
@@ -108,6 +126,7 @@ p {
     width: 100%;
     position: relative;
     left: 150px;
+    
 }
 button {
     outline: none;
@@ -117,32 +136,61 @@ button {
     font-weight: 400;
     color: #fff;
     background-color: cadetblue;
-    padding: 8px 14px;
+    padding: 6px 8px;
     margin: 40px 5px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    box-shadow: 0 13px 10px rgba(0, 0, 0, 0.4);
+    
 }
 button:hover {
-    background-color: blueviolet;
+    background-color: rgb(26, 24, 27);
 }
 .imgbox {
-    position: relative;
+    display: flex;
     width: 100%;
     height: 100%;
-}   
-.imgbox img {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    top: 100px;
-    right: 0px;
-    left: 100px;
- 
   
-    
-   
+}   
+.imgbox img {    
+    width: 100%;
+    height: auto;
+    display: grid;   
+    opacity: 60px; 
+       
 }
+
+
+ /* Estilos para dispositivos móveis */
+ @media only screen and (max-width: 600px) {
+    /* Adicione os estilos apropriados para dispositivos móveis aqui */
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adicione os estilos apropriados para tablets aqui */
+}
+
+/* Estilos para desktops */
+@media only screen and (min-width: 1025px) {
+    /* Adicione os estilos apropriados para desktops aqui */
+}
+
+@media only screen and (max-width: 600px) {
+    .cols {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px 1fr));
+    
+    margin-top: 50px;
+
+}
+
 #openMenu {
+    display: none;
 
 }
